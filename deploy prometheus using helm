@@ -1,0 +1,23 @@
+deploy prometheus using helm   
+==========================
+helm repo add prometheus https://prometheus-community.github.io/helm-charts   
+helm install prometheus prometheus/prometheus
+helm show values prometheus/prometheus
+helm template prometheus/prometheus
+
+helm install prometheus prometheus/prometheus
+helm upgrade prometheus prometheus/prometheus -f prometheus-values.yml
+
+git clone https://github.com/myLandmakTechnology/prometheus-grafana-ELK-EFK
+
+
+
+deploy grafana using helm   
+==========================
+grafana   https://grafana.github.io/helm-charts   
+  helm repo add grafana https://grafana.github.io/helm-charts
+  helm install grafana grafana/grafana 
+
+kubectl get secret --namespace dev grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+
+
